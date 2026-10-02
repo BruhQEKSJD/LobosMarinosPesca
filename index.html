@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Especial periodístico sobre la caza de lobos marinos: historia, biología, legislación, pesca, acuicultura y conservación.">
+  <meta name="theme-color" content="#082f49">
+  <title>MAR ABIERTO — Caza de lobos marinos</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- AOS: animaciones al hacer scroll -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Tipografía -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#inicio">
+        <span class="brand-mark"><i class="fa-solid fa-water"></i></span>
+        MAR ABIERTO
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#chile">Chile</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pesca">Pesca</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cronologia">Cronología</a></li>
+          <li class="nav-item"><a class="nav-link" href="#fuentes">Fuentes</a></li>
+          <li class="nav-item ms-lg-2"><button class="btn btn-sm btn-outline-light rounded-pill px-3" id="themeToggle"><i class="fa-solid fa-moon me-1"></i>Modo</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <header id="inicio" class="hero-section">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+      <div class="container position-relative z-2">
+        <div class="row align-items-center min-vh-100 py-5">
+          <div class="col-lg-7 pt-5" data-aos="fade-right">
+            <span class="eyebrow"><i class="fa-solid fa-newspaper"></i> ESPECIAL DE INVESTIGACIÓN · OCTUBRE 2026</span>
+            <h1 class="display-title mt-3">Caza de <span>lobos marinos</span></h1>
+            <p class="lead-copy mt-4">Una mirada histórica, biológica y normativa a una actividad que pasó de la explotación de recursos a un sistema moderno de conservación, regulación y monitoreo.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#introduccion" class="btn btn-ocean btn-lg rounded-pill px-4"><i class="fa-solid fa-compass me-2"></i>Explorar investigación</a>
+              <a href="#cronologia" class="btn btn-glass btn-lg rounded-pill px-4"><i class="fa-solid fa-clock-rotate-left me-2"></i>Ver cronología</a>
+            </div>
+            <div class="hero-meta mt-5">
+              <div><strong>24</strong><span>secciones</span></div>
+              <div><strong>1786–2026</strong><span>periodo documentado</span></div>
+              <div><strong>Chile</strong><span>foco principal</span></div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-left" data-aos-delay="150">
+            <div class="hero-visual">
+              <div class="orbit orbit-1"></div>
+              <div class="orbit orbit-2"></div>
+              <div class="sea-lion-art" aria-label="Ilustración decorativa de un lobo marino">
+                <svg viewBox="0 0 620 420" role="img" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="fur" x1="0" x2="1">
+                      <stop offset="0%" stop-color="#9a6b45"/>
+                      <stop offset="50%" stop-color="#5e3e2b"/>
+                      <stop offset="100%" stop-color="#2e211b"/>
+                    </linearGradient>
+                    <linearGradient id="water" x1="0" x2="1">
+                      <stop offset="0%" stop-color="#38bdf8" stop-opacity=".30"/>
+                      <stop offset="100%" stop-color="#0ea5e9" stop-opacity=".05"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0 330 C95 290 150 350 250 325 C355 300 445 340 620 292 L620 420 L0 420Z" fill="url(#water)"/>
+                  <ellipse cx="325" cy="275" rx="205" ry="85" fill="url(#fur)" opacity=".98"/>
+                  <ellipse cx="470" cy="245" rx="72" ry="82" fill="#523426"/>
+                  <path d="M505 221 C550 208 584 226 595 258 C562 257 529 246 505 221Z" fill="#6f4a34"/>
+                  <path d="M420 300 C456 305 490 336 500 362 C453 357 425 337 405 314Z" fill="#3c281e"/>
+                  <path d="M225 285 C183 303 143 341 132 366 C178 362 222 337 252 307Z" fill="#3b281f"/>
+                  <path d="M469 192 C446 165 455 140 479 133 C500 141 516 160 509 187Z" fill="#3c291f"/>
+                  <circle cx="495" cy="184" r="5" fill="#070707"/>
+                  <path d="M540 198 Q564 205 571 222 Q548 218 529 209Z" fill="#201712"/>
+                  <g stroke="#ead7c7" stroke-width="3" stroke-linecap="round" opacity=".7">
+                    <line x1="540" y1="201" x2="608" y2="186"/>
+                    <line x1="540" y1="205" x2="615" y2="203"/>
+                    <line x1="540" y1="210" x2="608" y2="220"/>
+                  </g>
+                  <path d="M120 353 C215 321 318 364 405 345 C475 330 532 346 620 325" stroke="#7dd3fc" stroke-width="5" fill="none" opacity=".35"/>
+                  <path d="M60 372 C145 345 232 382 312 362 C416 336 510 380 592 354" stroke="#bae6fd" stroke-width="3" fill="none" opacity=".26"/>
+                </svg>
+              </div>
+              <div class="hero-fact fact-top"><span>ESPECIE</span><strong><em>Otaria flavescens</em></strong></div>
+              <div class="hero-fact fact-bottom"><span>DISTRIBUCIÓN</span><strong>Perú → Diego Ramírez</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-cue"><span>Desplázate para investigar</span><i class="fa-solid fa-arrow-down"></i></div>
+    </header>
+
+    <!-- INTRO -->
+    <section id="introduccion" class="section-pad bg-paper">
+      <div class="container">
+        <div class="row g-4 align-items-end" data-aos="fade-up">
+          <div class="col-lg-8">
+            <span class="section-kicker">01 · CONTEXTO</span>
+            <h2 class="section-title">La palabra “caza” no cuenta toda la historia</h2>
+          </div>
+          <div class="col-lg-4">
+            <div class="mini-note"><i class="fa-solid fa-circle-info"></i> El documento distingue extracción intencional, captura incidental, manejo autorizado, rescate y observación.</div>
+          </div>
+        </div>
+        <div class="row g-4 mt-2">
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <article class="news-card h-100">
+              <div class="news-label">Introducción</div>
+              <p>La expresión <strong>“caza de lobos marinos”</strong> comprende distintas actividades humanas destinadas a capturar o matar lobos marinos y otros otáridos. Históricamente, estas actividades tuvieron objetivos alimentarios, comerciales y de aprovechamiento de productos animales. En épocas más recientes, algunos conflictos con la pesca, la acuicultura y otras actividades humanas han llevado a debates sobre la interacción entre lobos marinos y personas.</p>
+              <p class="mb-0">El documento centra su análisis en la <strong>historia de la explotación</strong>, con especial atención a Chile, y utiliza antecedentes de Norteamérica para mostrar la evolución de la regulación de los mamíferos marinos.</p>
+            </article>
+          </div>
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="180">
+            <div class="definition-grid">
+              <div class="definition-card"><i class="fa-solid fa-crosshairs"></i><span>Caza o extracción intencional</span></div>
+              <div class="definition-card"><i class="fa-solid fa-fish-fins"></i><span>Captura incidental en pesca</span></div>
+              <div class="definition-card"><i class="fa-solid fa-flask"></i><span>Captura científica o de manejo</span></div>
+              <div class="definition-card"><i class="fa-solid fa-heart-pulse"></i><span>Rescate y rehabilitación</span></div>
+              <div class="definition-card"><i class="fa-solid fa-binoculars"></i><span>Observación de fauna</span></div>
+              <div class="definition-card highlight"><i class="fa-solid fa-scale-balanced"></i><span>No significan lo mismo biológica ni jurídicamente</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BIOLOGY -->
+    <section class="section-pad biology-section" id="biologia">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <span class="section-kicker light">02 · BIOLOGÍA</span>
+            <h2 class="section-title light-title">¿Qué es un lobo marino?</h2>
+            <p class="section-intro light-copy">Los lobos marinos pertenecen a los <strong>otáridos (familia Otariidae)</strong>, un grupo de pinnípedos adaptados a una vida principalmente acuática que regresan a tierra para descansar, reproducirse y criar.</p>
+            <div class="scientific-name"><span>Nombre científico</span><strong><em>Otaria flavescens</em></strong><small>Algunas normas chilenas también han empleado <em>Otaria byronia</em>.</small></div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="feature-panel">
+              <div class="feature-list">
+                <div><i class="fa-solid fa-water"></i><span>Son mamíferos marinos.</span></div>
+                <div><i class="fa-solid fa-otter"></i><span>Poseen extremidades transformadas en aletas.</span></div>
+                <div><i class="fa-solid fa-ear-listen"></i><span>Los otáridos tienen pabellones auriculares externos pequeños.</span></div>
+                <div><i class="fa-solid fa-person-walking"></i><span>Pueden desplazarse en tierra con sus aletas anteriores y posteriores.</span></div>
+                <div><i class="fa-solid fa-people-group"></i><span>Forman colonias o agrupaciones, especialmente durante la reproducción.</span></div>
+                <div><i class="fa-solid fa-fish"></i><span>Son depredadores y consumen peces y otros organismos marinos.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="distribution-strip mt-5" data-aos="zoom-in">
+          <div><span>Distribución descrita en el documento</span><strong>Bahía Zorritos, Perú</strong></div>
+          <div class="range-line"><i class="fa-solid fa-location-dot"></i><span></span><i class="fa-solid fa-location-dot"></i></div>
+          <div><span>Extremo sur</span><strong>Islas Diego Ramírez, Chile</strong></div>
+        </div>
+        <div class="taxonomy-box mt-4" data-aos="fade-up">
+          <strong>Foca ≠ lobo fino ≠ lobo marino</strong>
+          <p class="mb-0">Las focas verdaderas pertenecen a <em>Phocidae</em>; los lobos marinos y lobos finos pertenecen a <em>Otariidae</em>. Los otáridos se caracterizan, entre otras cosas, por pequeños pabellones auriculares externos, mejor capacidad de desplazamiento terrestre y aletas anteriores relativamente desarrolladas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORY -->
+    <section id="historia" class="section-pad bg-paper">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9" data-aos="fade-up">
+            <span class="section-kicker">03–06 · HISTORIA DE LA EXPLOTACIÓN</span>
+            <h2 class="section-title">De recurso comercial a especie bajo conservación</h2>
+            <p class="section-intro">El valor económico de carne, grasa, pieles y otros tejidos favoreció que, en ciertos lugares y momentos, la captura pasara de la subsistencia a la explotación comercial. El siglo XIX fue especialmente decisivo.</p>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-3">
+          <div class="col-md-6 col-xl-3" data-aos="fade-up">
+            <div class="product-card"><div class="icon-circle"><i class="fa-solid fa-drumstick-bite"></i></div><h3>Carne</h3><p>En determinadas comunidades y expediciones podía utilizarse como alimento.</p></div>
+          </div>
+          <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="80">
+            <div class="product-card"><div class="icon-circle"><i class="fa-solid fa-droplet"></i></div><h3>Grasa</h3><p>Se aprovechaba para obtener aceite o grasa; el siglo XIX registró mercados asociados a estos productos.</p></div>
+          </div>
+          <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="160">
+            <div class="product-card"><div class="icon-circle"><i class="fa-solid fa-shirt"></i></div><h3>Pieles</h3><p>Podían utilizarse en manufacturas de cuero y otros productos.</p></div>
+          </div>
+          <div class="col-md-6 col-xl-3" data-aos="fade-up" data-aos-delay="240">
+            <div class="product-card"><div class="icon-circle"><i class="fa-solid fa-box-open"></i></div><h3>Otros tejidos</h3><p>Vísceras y partes del animal fueron aprovechadas de maneras distintas según el lugar y el periodo.</p></div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-lg-7" data-aos="fade-right">
+            <article class="history-card">
+              <div class="card-kicker">Pacífico Norte y Norteamérica</div>
+              <h3>Una explotación extensa y difícil de medir</h3>
+              <p>En las islas Pribilof, la explotación comercial de lobos finos del norte comenzó bajo control ruso; NOAA señala que en <strong>1786</strong> los rusos llevaron grupos de cazadores aleutianos para trabajar en la explotación de pieles.</p>
+              <p>Para los lobos marinos de California, documentos históricos de NOAA describen una explotación especialmente intensa en el <strong>siglo XIX</strong>. Antes de 1800 ya existía utilización indígena y antes de 1860 los animales eran muy numerosos en la costa de California.</p>
+              <p>Durante la década de 1860 creció el interés comercial, ligado a aceite, pieles y otros productos; hacia las décadas de 1870 y 1880, la explotación había reducido las poblaciones en determinadas áreas.</p>
+            </article>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left">
+            <div class="quote-card">
+              <span class="quote-mark">“</span>
+              <p>El documento advierte que las cifras históricas muchas veces son estimaciones y no deben interpretarse como censos modernos.</p>
+              <span class="quote-source">Clave para leer las cifras históricas</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-lg-6" data-aos="fade-up">
+            <article class="news-card h-100">
+              <div class="news-label">Industrialización · siglo XIX</div>
+              <p>La expansión de los mercados internacionales permitió transportar productos obtenidos en lugares remotos. En el Pacífico americano se utilizaron <strong>barcos, cuadrillas especializadas, campamentos costeros, pequeñas embarcaciones y sistemas comerciales</strong> para mover pieles y aceite.</p>
+              <p class="mb-0">Un informe histórico de NOAA describe actividades intensivas aproximadamente entre <strong>1860 y 1888</strong>, especialmente para obtener aceite, y documenta posteriormente mercados de pieles y otros productos.</p>
+            </article>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="120">
+            <article class="news-card h-100 accent-border">
+              <div class="news-label">Del aprovechamiento a la conservación</div>
+              <p>El cambio de modelo estuvo impulsado por la <strong>disminución local de colonias, reducción de áreas reproductivas, presión comercial, captura de individuos reproductores, conflictos con la pesca, falta de información científica y preocupación por las especies y los ecosistemas</strong>.</p>
+              <p class="mb-0">La regulación moderna distingue entre extracción directa y <strong>mortalidad incidental</strong>, incluida la que ocurre cuando un animal queda atrapado en redes sin ser la especie objetivo.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NORTH AMERICA CASE -->
+    <section class="section-pad section-dark" id="norteamerica">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5" data-aos="fade-right">
+            <span class="section-kicker light">CASO HISTÓRICO</span>
+            <h2 class="section-title light-title">California: explotación, conflicto y protección</h2>
+            <p class="light-copy">El caso documentado por NOAA muestra un patrón que se repite en distintos lugares: explotación comercial intensa → disminución local → conflicto con sectores productivos → medidas de protección → regulación y monitoreo.</p>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="case-grid">
+              <div class="case-item"><strong>1860s</strong><span>Aumenta el interés comercial.</span></div>
+              <div class="case-item"><strong>1870–80</strong><span>Disminuciones en determinadas áreas.</span></div>
+              <div class="case-item"><strong>1899</strong><span>Se matan varios miles en Año Nuevo antes de suspender un permiso en reservas federales.</span></div>
+              <div class="case-item"><strong>1901</strong><span>Una investigación encuentra poca evidencia de daños importantes a pesquerías o aparejos y recomienda no hacer una campaña.</span></div>
+              <div class="case-item"><strong>1909</strong><span>Se aprueban medidas de protección en zonas de California.</span></div>
+              <div class="case-item"><strong>1972</strong><span>Estados Unidos aprueba la Marine Mammal Protection Act y establece una moratoria general sobre el “take”, con excepciones reguladas.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHILE -->
+    <section id="chile" class="section-pad bg-paper">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-lg-8" data-aos="fade-up">
+            <span class="section-kicker">07–15 · CHILE</span>
+            <h2 class="section-title">Cómo evolucionó la regulación chilena</h2>
+            <p class="section-intro">Chile posee una extensa costa y varias especies de mamíferos marinos. El marco jurídico ha cambiado varias veces, con vedas, suspensiones temporales, cuotas y restricciones geográficas.</p>
+          </div>
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="jurisdiction-alert"><i class="fa-solid fa-scale-balanced"></i><div><strong>Nota legal</strong><span>La legalidad concreta depende de especie, actividad, autorización, zona y norma aplicable.</span></div></div>
+          </div>
+        </div>
+
+        <div class="law-cards mt-5">
+          <article class="law-card" data-aos="fade-up"><span>1994</span><h3>Decreto Exento N.º 167</h3><p>Estableció una <strong>veda extractiva de cinco años</strong> para el lobo marino común, <em>Otaria flavescens</em>, en todo el litoral de la República. Se justificó en la necesidad de regular la extracción para asegurar su conservación.</p></article>
+          <article class="law-card" data-aos="fade-up" data-aos-delay="80"><span>1995</span><h3>Decreto Exento N.º 225</h3><p>Estableció una <strong>veda extractiva nacional por 30 años</strong> para diversos mamíferos, aves y reptiles marinos. Su objetivo declarado fue adoptar medidas de conservación para proteger fauna silvestre marina.</p></article>
+          <article class="law-card" data-aos="fade-up" data-aos-delay="160"><span>1996</span><h3>Decreto Exento N.º 203</h3><p>Suspendió temporalmente la veda del lobo marino común en las regiones <strong>I y II</strong> y estableció una <strong>cuota global anual</strong>. El documento destaca que las autorizaciones temporales no implican autorización permanente.</p></article>
+          <article class="law-card" data-aos="fade-up" data-aos-delay="240"><span>2004</span><h3>Decreto Exento N.º 110</h3><p>Suspendió durante <strong>45 días</strong> la veda extractiva del lobo marino común en un sector marítimo de la provincia de Última Esperanza, XII Región, sobre la base de antecedentes técnicos.</p></article>
+          <article class="law-card" data-aos="fade-up"><span>2008</span><h3>Ley N.º 20.293</h3><p>Ley de Protección de Cetáceos. Aunque no regula exclusivamente al lobo marino, forma parte de la evolución general del marco chileno de protección de mamíferos marinos y modificó la Ley General de Pesca y Acuicultura.</p></article>
+          <article class="law-card" data-aos="fade-up" data-aos-delay="80"><span>2013</span><h3>Decreto N.º 112</h3><p>Estableció una <strong>veda extractiva para el lobo marino común entre las regiones XV y XII</strong>.</p></article>
+          <article class="law-card law-card-featured" data-aos="fade-up" data-aos-delay="160"><span>2021</span><h3>Decreto Exento N.º 202100004</h3><p>Estableció una <strong>veda extractiva por diez años</strong> para el lobo marino común —<em>Otaria byronia</em> en el texto de esa norma— en todo el territorio y aguas jurisdiccionales de la República, desde el <strong>27 de enero de 2021</strong>.</p><div class="law-bottom"><strong>Fin del periodo señalado: enero de 2031</strong><small>También prohibió tenencia, posesión, transporte, desembarque, elaboración o transformación, comercialización y almacenamiento respecto de ejemplares o partes provenientes de actividades extractivas.</small></div></article>
+          <article class="law-card" data-aos="fade-up" data-aos-delay="240"><span>2025</span><h3>Decreto Exento N.º 202500204</h3><p>En octubre de 2025, SERNAPESCA publicó la renovación de la veda extractiva de mamíferos marinos, reptiles marinos y pingüinos por el periodo que indica. Para conocer la situación vigente debe consultarse el texto íntegro y sus modificaciones.</p></article>
+        </div>
+
+        <div class="current-box mt-5" data-aos="zoom-in">
+          <div class="current-icon"><i class="fa-solid fa-gavel"></i></div>
+          <div><h3>¿Está permitida actualmente la caza de lobos marinos en Chile?</h3><p>El documento señala que la respuesta depende de la especie, actividad, autorización, zona y norma aplicable. Para el lobo marino común existe una veda extractiva nacional establecida y renovada mediante normas de la autoridad pesquera. Esto no significa que ningún ejemplar pueda ser manipulado bajo ninguna circunstancia: existen actividades de investigación científica, rescate, rehabilitación, monitoreo, manejo autorizado, custodia de restos y otras sujetas a autorización.</p><strong>Estas actividades no deben confundirse con una cacería comercial libre.</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FISHING / AQUACULTURE -->
+    <section id="pesca" class="section-pad ocean-section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-7" data-aos="fade-right">
+            <span class="section-kicker light">16–18 · INTERACCIÓN CON ACTIVIDADES PRODUCTIVAS</span>
+            <h2 class="section-title light-title">Pesca, captura incidental y acuicultura</h2>
+            <p class="light-copy">La interacción moderna exige diferenciar entre una extracción intencional y una mortalidad que ocurre como consecuencia no buscada de otras operaciones.</p>
+
+            <div class="conflict-panel mt-4">
+              <div class="conflict-col">
+                <div class="conflict-heading"><i class="fa-solid fa-fish-fins"></i> Interacción con pesca</div>
+                <p>Los lobos marinos pueden acercarse a embarcaciones, consumir peces, interactuar con redes, alimentarse cerca de instalaciones y aprovechar peces concentrados por actividades humanas.</p>
+                <ul>
+                  <li>Daño o pérdida de capturas.</li>
+                  <li>Daño de aparejos.</li>
+                  <li>Cambios en las operaciones.</li>
+                  <li>Percepción de competencia por determinados recursos.</li>
+                </ul>
+              </div>
+              <div class="conflict-col border-start-lg">
+                <div class="conflict-heading"><i class="fa-solid fa-triangle-exclamation"></i> La evidencia importa</div>
+                <p>El documento advierte que no debe suponerse automáticamente que toda disminución de una especie pesquera sea causada principalmente por lobos marinos.</p>
+                <p>Una asesoría parlamentaria de la Biblioteca del Congreso Nacional resume estudios donde los lobos marinos son uno de varios depredadores y, en la mayoría de los estudios revisados, otros depredadores representaban una fuente mayor de mortalidad por depredación. Se señala una posible excepción para adultos de <strong>merluza del sur</strong> en el mar interior de Los Lagos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5" data-aos="fade-left">
+            <div class="bycatch-card">
+              <div class="bycatch-top"><span>CAPTURA INCIDENTAL</span><i class="fa-solid fa-life-ring"></i></div>
+              <p>Ocurre cuando un animal queda atrapado o resulta afectado por una actividad pesquera sin ser la especie objetivo.</p>
+              <div class="injury-list">
+                <span>Lesiones</span><span>Estrés</span><span>Pérdida de movilidad</span><span>Ahogamiento</span><span>Muerte</span>
+              </div>
+              <hr>
+              <h4>Herramientas de gestión</h4>
+              <ul>
+                <li>Modificación de artes de pesca.</li>
+                <li>Protocolos de manipulación y liberación.</li>
+                <li>Monitoreo y planes de contingencia.</li>
+                <li>Capacitación de trabajadores.</li>
+                <li>Recopilación de datos.</li>
+              </ul>
+              <small>SUBPESCA y SERNAPESCA mantienen normas y resoluciones específicas sobre interacciones con mamíferos marinos.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="aquaculture-banner mt-5" data-aos="fade-up">
+          <div class="aqua-icon"><i class="fa-solid fa-fish"></i></div>
+          <div><span>ACUICULTURA</span><h3>Prevenir la interacción sin convertirla automáticamente en una autorización para matar</h3><p>Los lobos marinos pueden aproximarse a centros de cultivo y tratar de capturar peces. Las respuestas de manejo pueden incluir medidas de prevención y protocolos de contingencia. Cualquier actividad de control debe analizarse dentro del marco legal correspondiente.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY HISTORY MATTERS -->
+    <section class="section-pad bg-paper">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <span class="section-kicker">20 · CONTEXTO HISTÓRICO</span>
+            <h2 class="section-title">Por qué importa mirar hacia atrás</h2>
+            <p class="section-intro">La historia de la caza de lobos marinos permite observar cómo cambian las relaciones entre sociedad, economía y medio ambiente.</p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="compare-box">
+              <div><span>Antes</span><ul><li>Animales considerados recursos abundantes.</li><li>Mercados demandaban pieles y aceite.</li><li>Poca información sobre poblaciones.</li><li>Fiscalización limitada.</li></ul></div>
+              <div class="compare-divider"><i class="fa-solid fa-arrow-right"></i></div>
+              <div><span>Con el tiempo</span><ul><li>Aumentó la investigación científica.</li><li>Se desarrollaron censos y monitoreo.</li><li>Se identificaron problemas de sobreexplotación.</li><li>Se crearon vedas y leyes de protección.</li><li>Se estudiaron interacciones con la pesca.</li></ul></div>
+            </div>
+          </div>
+        </div>
+        <div class="principle-line mt-5" data-aos="fade-up"><i class="fa-solid fa-arrows-rotate"></i><span>Las políticas ambientales no son estáticas: pueden modificarse cuando aparecen nuevos datos científicos, problemas económicos u objetivos de conservación.</span></div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="cronologia" class="section-pad timeline-section">
+      <div class="container">
+        <div class="text-center mx-auto timeline-heading" data-aos="fade-up">
+          <span class="section-kicker light">21 · CRONOLOGÍA</span>
+          <h2 class="section-title light-title">1786 → 2026</h2>
+          <p class="light-copy">Una línea de tiempo para leer el cambio desde la explotación histórica hasta la regulación contemporánea.</p>
+        </div>
+
+        <div class="timeline mt-5">
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>1786</span><h3>Islas Pribilof</h3><p>Bajo control ruso comienza una etapa documentada de explotación comercial de lobos finos del norte con cuadrillas de cazadores aleutianos.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>Siglo XIX</span><h3>Expansión comercial</h3><p>Se intensifica en distintas partes del Pacífico la explotación de pinnípedos para pieles, aceite, carne y otros productos.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>1860–1888</span><h3>California</h3><p>NOAA describe una explotación intensa de lobos marinos de California, especialmente para aceite.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>1899</span><h3>Campañas de reducción</h3><p>En California, miles de animales mueren en Año Nuevo antes de que se suspenda el permiso en reservas federales.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>1901</span><h3>Investigación</h3><p>Una investigación citada por NOAA encuentra poca evidencia de daños importantes a pesquerías o aparejos y recomienda no realizar una cacería.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>1909</span><h3>Protección</h3><p>California aprueba medidas de protección para los lobos marinos en determinadas zonas.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>1930s</span><h3>Explotación residual</h3><p>Continúan algunas formas de explotación y captura, aunque las campañas sistemáticas anteriores habían disminuido.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>1972</span><h3>Marine Mammal Protection Act</h3><p>Estados Unidos establece una moratoria general sobre la captura de mamíferos marinos, con excepciones reguladas.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>1978</span><h3>Instituciones en Chile</h3><p>Se crea formalmente el Servicio Nacional de Pesca y el Consejo Nacional de Pesca mediante el D.L. 2.442.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>1989 / 1991</span><h3>Marco pesquero</h3><p>Se promulga la Ley General de Pesca y Acuicultura; posteriormente queda refundida y sistematizada por el D.S. 430 de 1991.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>1994</span><h3>Veda de 5 años</h3><p>Chile establece una veda extractiva nacional para el lobo marino común mediante el Decreto Exento N.º 167.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>1995</span><h3>Veda nacional de 30 años</h3><p>El Decreto Exento N.º 225 establece una veda extractiva nacional para diversos mamíferos, aves y reptiles marinos.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>1996</span><h3>Cuotas y regiones</h3><p>El Decreto Exento N.º 203 suspende temporalmente la veda en las regiones I y II y establece una cuota global anual.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>2004</span><h3>Suspensión por 45 días</h3><p>El Decreto Exento N.º 110 establece una suspensión temporal en un sector de Última Esperanza.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>2008</span><h3>Ley N.º 20.293</h3><p>La Ley de Protección de Cetáceos fortalece el marco de protección de mamíferos, reptiles y aves hidrobiológicas.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>2013</span><h3>Veda XV–XII</h3><p>El Decreto N.º 112 establece una veda extractiva para el lobo marino común entre las regiones XV y XII.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>2021</span><h3>Veda de 10 años</h3><p>El Decreto Exento N.º 202100004 establece una veda nacional desde el 27 de enero de 2021 y fija el periodo señalado hasta enero de 2031.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>2025</span><h3>Renovación</h3><p>SERNAPESCA publica el Decreto Exento N.º 202500204 sobre la renovación de la veda extractiva de mamíferos marinos, reptiles marinos y pingüinos.</p></div></div>
+          <div class="timeline-item" data-aos="fade-up"><div class="timeline-dot"></div><div class="timeline-content"><span>2026</span><h3>Consulta de vigencia</h3><p>SUBPESCA y SERNAPESCA continúan siendo referencias principales para determinar reglas vigentes y sus modificaciones.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRENT LEGAL NOTE -->
+    <section class="section-pad bg-paper">
+      <div class="container">
+        <div class="research-note" data-aos="fade-up">
+          <div class="research-note-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div><span>LECTURA CRÍTICA DE LAS NORMAS</span><h2>Una fecha histórica no basta para decidir qué es legal hoy</h2><p>La legislación puede ser modificada, reemplazada, renovada o complementada. Las fechas del especial sirven para construir una cronología histórica, pero no deben utilizarse por sí solas para determinar la legalidad de una actividad concreta. Para una fecha, especie o región específica, el documento recomienda consultar directamente el texto íntegro de la norma y sus eventuales modificaciones.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCLUSION -->
+    <section class="section-pad conclusion-section">
+      <div class="container">
+        <div class="row justify-content-center text-center" data-aos="fade-up">
+          <div class="col-lg-9">
+            <span class="section-kicker light">24 · CONCLUSIÓN</span>
+            <h2 class="section-title light-title">Una historia de cambio</h2>
+            <p class="conclusion-lead">La caza de lobos marinos combina subsistencia, comercio, explotación de recursos, conflictos con actividades pesqueras y, posteriormente, conservación.</p>
+            <div class="conclusion-grid mt-5">
+              <div><i class="fa-solid fa-ship"></i><span>Siglos XVIII–XIX</span><p>Explotación de pieles, aceite, carne y otros productos.</p></div>
+              <div><i class="fa-solid fa-arrow-trend-down"></i><span>Presión local</span><p>En algunas regiones, la presión comercial produjo fuertes reducciones.</p></div>
+              <div><i class="fa-solid fa-shield-halved"></i><span>Siglo XX</span><p>Transición hacia sistemas de protección y administración.</p></div>
+              <div><i class="fa-solid fa-scale-balanced"></i><span>Hoy</span><p>Diferenciar caza, captura incidental, investigación, rescate y manejo autorizado.</p></div>
+            </div>
+            <p class="conclusion-footer mt-5">Las fuentes oficiales chilenas —especialmente SUBPESCA, SERNAPESCA y la Biblioteca del Congreso Nacional— deben tener prioridad para conocer la situación legal exacta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="section-pad bg-paper">
+      <div class="container">
+        <div class="row align-items-end mb-4" data-aos="fade-up">
+          <div class="col-lg-8"><span class="section-kicker">ESPECIAL MULTIMEDIA</span><h2 class="section-title">Video: el conflicto entre lobos marinos y pesca</h2></div>
+          <div class="col-lg-4 text-lg-end"><span class="video-note"><i class="fa-solid fa-play me-1"></i> Reportaje externo · YouTube</span></div>
+        </div>
+        <div class="video-shell" data-aos="zoom-in">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/LnXLepOKgio" title="Lobos marinos en Chile y su interacción con sectores productivos — CHV Noticias" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        <p class="video-caption mt-3">El documental/reportaje elegido aborda el conflicto entre sectores productivos y los lobos marinos protegidos en Chile, incluyendo pesca artesanal y centros de cultivo. El video es un recurso externo y su contenido pertenece a su respectivo canal.</p>
+      </div>
+    </section>
+
+    <!-- SOURCES -->
+    <section id="fuentes" class="section-pad footer-source-section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-7" data-aos="fade-right">
+            <span class="section-kicker light">22–23 · FUENTES</span>
+            <h2 class="section-title light-title">Páginas para seguir investigando</h2>
+            <p class="light-copy">Las siguientes direcciones están tomadas del documento base. Para información jurídica vigente, conviene revisar siempre la versión oficial de la norma y sus modificaciones.</p>
+            <div class="source-list mt-4">
+              <a class="source-link" href="https://www.subpesca.cl/portal/normativa/Especies-Hidrobiologicas/Mamiferos/Lobo-marino/" target="_blank" rel="noopener"><span><b>SUBPESCA</b> · Normativa sobre lobo marino</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://subpesca.cl/portal/normativa/Medidas-de-administracion-y-regimenes-de-acceso/Vedas/" target="_blank" rel="noopener"><span><b>SUBPESCA</b> · Vedas y medidas de administración</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://www.sernapesca.cl/normativas/" target="_blank" rel="noopener"><span><b>SERNAPESCA</b> · Normativas</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://www.sernapesca.cl/informacion-utilidad/acta-de-entrega-y-custodia-de-fauna-marina-protegida/" target="_blank" rel="noopener"><span><b>SERNAPESCA</b> · Acta de entrega y custodia de fauna marina protegida</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://www.sernapesca.cl/normativas/d-ex-n-202500204-23-10-2025-renueva-veda-extractiva-de-mamiferos-marinos-reptiles-marinos-y-pinguinos-por-periodo-que-indica/" target="_blank" rel="noopener"><span><b>SERNAPESCA</b> · Decreto Exento N.º 202500204</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://www.bcn.cl/leychile/navegar?i=20721" target="_blank" rel="noopener"><span><b>BCN</b> · Decreto Exento N.º 225 de 1995</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://www.bcn.cl/leychile/navegar?idNorma=20508" target="_blank" rel="noopener"><span><b>BCN</b> · Decreto Exento N.º 167 de 1994</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://www.bcn.cl/leychile/navegar?f=1996-09-23&i=20645" target="_blank" rel="noopener"><span><b>BCN</b> · Decreto Exento N.º 203 de 1996</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://www.bcn.cl/leychile/navegar?idNorma=220733" target="_blank" rel="noopener"><span><b>BCN</b> · Decreto Exento N.º 110 de 2004</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://www.bcn.cl/leychile/navegar?idNorma=1155067" target="_blank" rel="noopener"><span><b>BCN</b> · Decreto Exento N.º 202100004 de 2021</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://subpesca.cl/portal/difusion/Noticias/127117%3ACompromiso-y-esfuerzo-de-Chile-con-la-proteccion-de-mamiferos-marinos-durante-las-operaciones-de-pesca-y-acuicultura-es-reconocido-por-Estados-Unidos" target="_blank" rel="noopener"><span><b>SUBPESCA</b> · Protección de mamíferos marinos y pesca</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://www.fisheries.noaa.gov/national/marine-mammal-protection/marine-mammal-stock-assessment-reports-species-stock" target="_blank" rel="noopener"><span><b>NOAA Fisheries</b> · Marine Mammal Stock Assessment Reports</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://www.fisheries.noaa.gov/species/steller-sea-lion/conservation-management" target="_blank" rel="noopener"><span><b>NOAA Fisheries</b> · Steller Sea Lion: Conservation Management</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://www.fisheries.noaa.gov/species/northern-fur-seal" target="_blank" rel="noopener"><span><b>NOAA Fisheries</b> · Northern Fur Seal</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://repository.library.noaa.gov/view/noaa/26672/noaa_26672_DS1.pdf" target="_blank" rel="noopener"><span><b>NOAA</b> · Historical survey of sea lion rookery sites</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://swfsc-publications.fisheries.noaa.gov/publications/CR/1985/8522.PDF" target="_blank" rel="noopener"><span><b>NOAA</b> · Historical review of exploitation of California sea lions</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a class="source-link" href="https://www.bcn.cl/asesoriasparlamentarias/res_busq_cate.html?campo=score&cate=Recursos+Naturales&desde=0&num=4&orden=desc&tema=Ley+de+Proteccion+de+Mamiferos+Marinos" target="_blank" rel="noopener"><span><b>BCN</b> · Antecedentes sobre Ley de Protección de Mamíferos Marinos</span><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-5" data-aos="fade-left">
+            <div class="source-types">
+              <h3>Cómo investigar el tema</h3>
+              <div class="type-card"><span class="type-badge legal">A</span><div><strong>Fuentes legales</strong><p>BCN, SUBPESCA y SERNAPESCA. Sirven para comprobar qué estaba permitido, prohibido o regulado en una fecha concreta.</p></div></div>
+              <div class="type-card"><span class="type-badge science">B</span><div><strong>Fuentes científicas</strong><p>Informes de NOAA, universidades, comités científicos y artículos sobre población, dieta, reproducción y mortalidad.</p></div></div>
+              <div class="type-card"><span class="type-badge history">C</span><div><strong>Fuentes históricas</strong><p>Archivos, informes antiguos, estudios históricos de explotación, museos y organismos públicos.</p></div></div>
+            </div>
+
+            <div class="editorial-note mt-4"><i class="fa-solid fa-pen-nib"></i><div><strong>Equipo editorial / asociados</strong><p class="mb-0">Proyecto educativo · Investigación · Redacción · Desarrollo web. Puedes reemplazar este bloque por los nombres o logos reales de los integrantes.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container py-5">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-6">
+          <div class="footer-brand d-flex align-items-center gap-2"><span class="brand-mark"><i class="fa-solid fa-water"></i></span> MAR ABIERTO</div>
+          <p class="footer-copy mt-3">Especial digital sobre la caza de lobos marinos, elaborado a partir del documento de investigación entregado para este proyecto. Última revisión documental indicada en la fuente base: <strong>octubre de 2026</strong>.</p>
+        </div>
+        <div class="col-lg-3"><h4>Secciones</h4><a href="#historia">Historia</a><a href="#chile">Marco chileno</a><a href="#pesca">Pesca y acuicultura</a><a href="#cronologia">Cronología</a></div>
+        <div class="col-lg-3"><h4>Asociados</h4><span>Investigación</span><span>Redacción</span><span>Diseño y desarrollo web</span><span>Revisión de fuentes</span></div>
+      </div>
+      <hr class="footer-divider">
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-2 small footer-bottom"><span>© <span id="year"></span> MAR ABIERTO · Especial informativo</span><span>Las normas pueden cambiar: consulta siempre la versión oficial vigente.</span></div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
